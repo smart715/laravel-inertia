@@ -22,4 +22,21 @@ class HomeController extends Controller
 
         return redirect()->to('/');
     }
+    public function update(Request $request, Todo $todo)
+    {
+        $todo->update([
+            'is_done' => $request->boolean('is_done'),
+        ]);
+
+        return redirect()->to('/');
+    }
+    public function destroy(Todo $todo)
+    {
+        $todo->delete();
+
+        return redirect()->to('/');
+    }
+
+
+
 }
