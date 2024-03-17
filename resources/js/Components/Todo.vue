@@ -7,6 +7,7 @@
             @change="save"
         />
 
+        <!-- <p>{{ todo.task }}</p> -->
         <p>{{ todoForm.task }}</p>
         <button
             type="button"
